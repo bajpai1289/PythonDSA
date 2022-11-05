@@ -84,6 +84,16 @@ class TreeNode:
         TreeNode.display_keys(node.right, space, level+1)
         print(space*level + str(node.key))
         TreeNode.display_keys(node.left,space,level+1)
+    
+    @staticmethod
+    def find(node,key):
+        if node == None:
+            return None
+        elif node.key==key:
+            return node
+        elif node.key<key:
+            return TreeNode.find(node.right, key)
+        else: return TreeNode.find(node.left,key)
 
 
 
@@ -93,3 +103,5 @@ tree = TreeNode.parse_tuple(((1,3,None),2,((None, 3, 4),5,(6,7,8))))
 # tree2=TreeNode.parse_tuple()
 print(TreeNode.is_bst(tree))
 TreeNode.display_keys(tree)
+
+print(TreeNode.find(tree,1))
