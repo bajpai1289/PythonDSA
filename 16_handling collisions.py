@@ -129,4 +129,14 @@ test=probingTable.list_all()
 probingTable.update('silent', 101)
 print(probingTable.find('silent'))
         
-    
+print(hash('hello')) #does same thing as get_valid_INDEX
+
+#Hash Table Imporvements:
+'''
+
+1. Track the size of the hash table i.e. number of key-value pairs so that len(table) has complexity O(1).
+2. Implement deletion with tombstones as described here: https://research.cs.vt.edu/AVresearch/hashing/deletion.php
+3. Implement dynamic resizing to automatically grow/shrink the data list: https://charlesreid1.com/wiki/Hash_Maps/Dynamic_Resizing
+4. Implement separate chaining, an alternative to linear probing for collision resolution: https://www.youtube.com/watch/T9gct6Dx-jo
+
+'''
