@@ -69,45 +69,64 @@ basic_table.insert('silent',200)
 # print(basic_table.find('listen'))
 
 
-def get_valid_index(data_list,key):
-    idx=get_index(data_list,key)
+def get_valid_index(datalist,key):
+    idx=get_index(datalist,key)
+    
     while True:
-        k=data_list[idx]
+        k=datalist[idx]
+    
         if k is None:
             return idx
-        
-        if k==key:
+        i,v=k
+        if i==key:
             return idx
         idx+=1
-        if idx==len(data_list):
+        if idx==len(datalist):
             idx=0
     
 data_list2=[None]*MAX_HASH_TABLE_SIZE
-print(get_valid_index(data_list2,'listen')==655)
+# print(get_valid_index(data_list2,'listen')==655)
 
-data_list2[get_index(data_list2,'listen')]=('listen',99)
-print(get_valid_index(data_list2,'silent')==656)
+# data_list2[get_index(data_list2,'listen')]=('listen',99)
+# print(get_valid_index(data_list2,'silent')==656)
             
             
 
 
 class ProbingHashTable:
-    def __init__(self, max_size=MAX_HASH_TABLE_SIZE) -> None:
+    def __init__(self, max_size=MAX_HASH_TABLE_SIZE):
         self.data_list=[None]*max_size
     
     def insert(self, key, value):
         idx= get_valid_index(self.data_list,key)
-        self.data_list[idx]=key,value
+        self.data_list[idx]=(key,value)
         
     def find(self, key):
         idx=get_valid_index(self.data_list, key)
+        # print(idx)
         kv=self.data_list[idx]
-        return None if kv is None else kv[1]
+        if kv is None:
+            return ('Not found')
+        else:
+            key,value=kv
+            return value
+        # return None if kv is None else kv[1]
     
     def update(self,key, value):
         idx=get_valid_index(self.data_list,key)
         self.data_list[idx]= (key,value)
         
     def list_all(self):
-        return [kv[0] for kv in self.data_list if kv is not None]
+        return ( [kv for kv in self.data_list if kv is not None])
+        # print(self.data_list)
+    
+probingTable=ProbingHashTable()
+probingTable.insert('silent',99)
+probingTable.insert('listen',200)
+
+probingTable.list_all()
+test=probingTable.list_all()
+probingTable.update('silent', 101)
+print(probingTable.find('silent'))
         
+    
