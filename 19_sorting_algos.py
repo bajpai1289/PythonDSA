@@ -28,22 +28,10 @@ def insertionSort(nums):
         nums.insert(j+1, cur)
     return nums  
 arr=[4,4,1,2,3,5,7,8,5,4,1,0]
-print(insertionSort(arr))
+# print(insertionSort(arr))
 
 #DIVIDE AND CONQUER ALGORITHMS
 #Merge Sort 
-
-def mergeold(left, right):
-    result=[]
-    i,j=0,0
-    for i in range(len(left)+len(right)):
-        if left[i]>right[j]:
-            result.append(right[j])
-            j+=1
-        else:
-            result.append(left[i])
-            i+=1
-    return result
 
 
 def merge(nums1, nums2):    
@@ -83,14 +71,46 @@ def mergeSort(nums):
     return sorted_nums
     
     
-    
+def partition(nums, start=0,end=None):
+    if end is None:
+        end = len(nums)-1
+    #initialize left and right pointer
+    l,r=start,end-1
+    #iterate while they are apart
+    while r>l:
+        #increment left pointer if number is less than or equal to pivot
+        if nums[l]<=nums[end]:
+            l+=1
+        #decrement right pointer if number is greater or equal to pivot
+        elif nums[r]>nums[end]:
+            r-=1
+        else:
+            nums[l],nums[r]=nums[r],nums[l] #if two out of position element are found swap them
+    #place the pivot b/w two parts
+    if nums[l]>nums[end]:
+        nums[l],nums[end]=nums[end],nums[l]
+        return l
+    else: return end
+
+def quickSort(nums,start=0,end=0):
+    if end is None:
+        nums=list(nums) #entirely optional strep as we dont want to change tehe original list entirely
+        end=len(nums)-1
+    if start<end:
+        pivot=partition(nums,start,end)
+        quickSort(nums,start,pivot-1)
+        quickSort(nums, pivot+1, end)
+    return nums      
      
 left=[1,3,5,7,9]
 right=[2,4,6,8,10]
-print(merge(left,right))
+# print(merge(left,right))
+# print(mergeSort(arr))
+l1=[1,5,6,2,0,11,3]
+print(partition(l1))
+print(quickSort(l1))
 
-
-
+#6:33:51
 
 
 
