@@ -92,7 +92,7 @@ def partition(nums, start=0,end=None):
         return l
     else: return end
 
-def quickSort(nums,start=0,end=0):
+def quickSort(nums,start=0,end=None):
     if end is None:
         nums=list(nums) #entirely optional strep as we dont want to change tehe original list entirely
         end=len(nums)-1
