@@ -1,6 +1,3 @@
-from unittest import result
-
-
 class Notebook:
     def __init__(self,title,username,likes) -> None:
         self.title,self.username,self.likes=title,username,likes
