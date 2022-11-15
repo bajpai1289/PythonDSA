@@ -12,9 +12,9 @@ def lcs_rec(seq1,seq2,idx1=0,idx2=0):
     
 # m="AGGTAB"
 # n="GXTXAYB"
-m='qwqawexqqwqwwswrq'
-n='knuokojokimpopppo'
-# print(lcs_rec(m,n),len(m),len(n))
+m='qwerasdfzxcvqwerasdfzxcqweasdfzxcc'
+n='poiulkjhmnbpoiulkjmnbpoiulkjmnnpoi'
+print(lcs_rec(m,n),len(m),len(n))
 
 #using memoization
 def lcs_memo(seq1,seq2):
@@ -31,4 +31,25 @@ def lcs_memo(seq1,seq2):
             memo[key]=max(recurse(idx1+1,idx2),recurse(idx1,idx2+1))
         return memo[key]
     return recurse(0,0)    
-print(lcs_memo(m,n))
+# print(lcs_memo(m,n))
+
+#CREATING A TABLE:
+# n1=5
+# n2=7
+# table = [[0 for x in range(n2)] for y in range(n1)]
+# print(table)
+
+#using DP to solve this question
+def lcs_dp(seq1, seq2):
+    n1,n2=len(seq1),len(seq2)
+    table=[[0 for i in range(n2+1)] for i in range(n1+1)]  #because we need an additional row to track the case where either of the sequence is empty
+    for idx1 in range(n1):  #iterating over the rows
+        for idx2 in range(n2): #iterating over the columns
+            if seq1[idx1]==seq2[idx2]:
+                table[idx1+1][idx2+1]=1+table[idx1][idx2]
+            else:
+                table[idx1+1][idx2+1]=max(table[idx1][idx2+1],table[idx1+1][idx2])
+    return table[-1][-1] #return last row,column of the table
+
+
+# print(lcs_dp(m,n))
