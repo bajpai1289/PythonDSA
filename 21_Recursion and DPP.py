@@ -12,9 +12,9 @@ def lcs_rec(seq1,seq2,idx1=0,idx2=0):
     
 # m="AGGTAB"
 # n="GXTXAYB"
-m='qwerasdfzxcvqwerasdfzxcqweasdfzxcc'
-n='poiulkjhmnbpoiulkjmnbpoiulkjmnnpoi'
-print(lcs_rec(m,n),len(m),len(n))
+m='serendipitous'
+n='precipitation'
+# print(lcs_rec(m,n),len(m),len(n))
 
 #using memoization
 def lcs_memo(seq1,seq2):
@@ -22,6 +22,7 @@ def lcs_memo(seq1,seq2):
     def recurse(idx1=0,idx2=0):
         key=(idx1,idx2)
         if key in memo:
+            # print(memo)
             return memo[key]
         elif idx1==len(seq1) or idx2==len(seq2):
             memo[key]=0
@@ -53,3 +54,33 @@ def lcs_dp(seq1, seq2):
 
 
 # print(lcs_dp(m,n))
+
+def fact(n):
+    memo={}
+    def recurse(x=n):
+        key=x
+        if key in memo:
+            print(memo)
+            return memo[key]
+        elif x==1:
+            memo[key]=1
+        else:
+            memo[key]=x*recurse(x-1)
+            print(memo)
+        return memo[key]
+    return recurse(n)
+
+
+print(fact(7))
+# n=1200
+# arr=[1]
+# for i in range(1,n+1):
+#     arr.append(arr[i-1]*i)
+# print(arr[-1])
+
+# n=5000
+# res=[0,1]
+# for i in range(2,n):
+#     res.append(res[i-1]+res[i-2])
+# for i in res:
+#     print(i)

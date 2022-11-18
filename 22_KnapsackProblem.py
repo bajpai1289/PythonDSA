@@ -91,4 +91,18 @@ def max_profit_memo(weights,profits, capacity):
         return memo[key]
     return recurse(capacity=capacity,idx=0)
 
-print(max_profit_memo(**test2['input']))
+print(max_profit_memo(**test0['input']))  
+
+def max_profit_dp(weights, profits,capacity):
+    n=len(weights)
+    table=[[0 for _ in range(capacity+1)] for _ in range(n+1)]
+    for i in range(n):
+        for c in range(1,capacity+1):  #to take all the values from zero to capacity so the iterator should take the value 
+            if weights[i]>c:           # from 1 to 10(capacity+1)
+                table[i+1][c]=table[i][c]
+            else:
+                table[i+1][c]=max(table[i][c],profits[i]+table[i][c-weights[i]])
+    return table[-1][-1]
+
+print(max_profit_dp(**test0['input']))
+
