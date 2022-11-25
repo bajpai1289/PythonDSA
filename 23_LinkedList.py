@@ -52,6 +52,29 @@ list1.append(2)
 list1.append(3)
 list1.append(5)
 list1.append(9)
-print(list1.length())
-print(list1.sumOfElements())
-print(list1.getElement(2))
+# print(list1.length())
+# print(list1.sumOfElements())
+# print(list1.getElement(2))
+list1.showElements()
+
+def reverse(l):
+    if l.head is None:
+        return
+    
+    current_node = l.head
+    prev_node = None
+    
+    while current_node is not None:
+        # Track the next node
+        next_node = current_node.next
+        
+        # Modify the current node
+        current_node.next = prev_node
+        
+        # Update prev and current
+        prev_node = current_node
+        current_node = next_node
+        
+    l.head = prev_node 
+reverse(list1)
+list1.showElements()
