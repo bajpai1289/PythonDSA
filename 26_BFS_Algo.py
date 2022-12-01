@@ -85,8 +85,14 @@ graph2=Graph(num_nodes3,edges3)
 # print(graph2)
 # print(bfs(graph2,0))
 
+node=5
+edges=[(1,0),(0,2),(1,2),(0,3),(3,4)]
+graph3=Graph(node,edges)
+print(graph3)
+# print(bfs_with_distance_and_parent(graph3,0))
+
 num_nodes4=10
 edges4=[(0,1),(0,2),(0,3),(1,4),(2,5),(2,6),(3,9),(4,8),(6,7),(6,9),(8,9)]
 graph5=Graph(num_nodes4,edges4)
 # print(graph5)
-print(bfs_with_distance_and_parent(graph5,0))
+# print(bfs_with_distance_and_parent(graph5,0))

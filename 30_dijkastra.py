@@ -1,3 +1,4 @@
+#TODO: i dont have any fucking idea on how this works
 class Graph:
     def __init__(self, num_nodes, edges, directed=False, weighted=False) -> None:
         self.num_nodes=num_nodes
@@ -36,11 +37,28 @@ class Graph:
 nodes=6
 edges=[(0,1,4),(0,2,2),(1,3,10),(1,2,5),(2,4,3),(3,5,11),(4,3,4)]
 graph1=Graph(nodes,edges,True,True)
-# print(graph1)
+print(graph1)
 
-def update_distances(graph,current,distance,parent):
-    pass
+def update_distances(graph, current, distance, parent=None):
+    """Update the distances of the current node's neighbors"""
+    neighbors = graph.data[current]
+    weights = graph.weights[current]
+    for i, node in enumerate(neighbors):
+        weight = weights[i]
+        if distance[current] + weight < distance[node]:
+            distance[node] = distance[current] + weight
+            if parent:
+                parent[node] = current
 
+def pick_next_node(distance, visited):
+    """Pick the next univisited node at the smallest distance"""
+    min_distance = float('inf')
+    min_node = None
+    for node in range(len(distance)):
+        if not visited[node] and distance[node] < min_distance:
+            min_node = node
+            min_distance = distance[node]
+    return min_node
 
 
 
@@ -49,7 +67,8 @@ def shortest_path(graph,source,target):
     parent=[False]*len(graph.data)  #to track the path by tracking why the node got appended in the queue
     distance=[float('inf')]*len(graph.data)
     queue=[]
-
+    # update_distances(graph,current, distance, parent)
+    next_node=pick_next_node(distance, visited)
     distance[source]=0
     queue.append(source)
     idx=0
@@ -63,4 +82,6 @@ def shortest_path(graph,source,target):
         if next_node:
             queue.append(next_node)
 
-    return distance[target]
+    return distance[target], parent
+
+print(shortest_path(graph1,0,5))
