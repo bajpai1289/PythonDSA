@@ -58,7 +58,7 @@ class LinkedList:
                 current = current.next
                 if current.next is None:
                     print('No such value in the linked list')
-                    exit(0)
+                    return
             
             if current.next.value==value:
                 current.next=current.next.next
@@ -82,5 +82,5 @@ list1.append(8)
 list1.append(10)
 list1.display()
 print('delete operation')
-list1.deleteNode(10)
+list1.deleteNode(11)
 list1.display()
