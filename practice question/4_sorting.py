@@ -54,7 +54,7 @@ class LinkedList:
         if current.value==value:
             self.head=self.head.next
         else:
-            while current.next is not None and current.next.value !=value:
+            while current.next is not None and current.next.value != value:
                 current = current.next
                 if current.next is None:
                     print('No such value in the linked list')
