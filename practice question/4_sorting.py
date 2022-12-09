@@ -46,7 +46,7 @@ class LinkedList:
     def display(self):
         current = self.head
         while current is not None:
-            print(current.value)
+            print(current.value,end="--->")
             current = current.next
     
     def deleteNode(self, value):
@@ -65,22 +65,53 @@ class LinkedList:
             else:
                 print('No such value in the list')
 
-    def insertSort(self):
-        current = self.head
-        while current.next is not None:
-            curr=current.value
-            self.deleteNode(current.value)
-            prev=current
-            while prev is not None and self.value>curr:
-                pass
+
 
 list1 = LinkedList()
-list1.append(5)
-list1.append(3)
+list2 = LinkedList()
 list1.append(1)
-list1.append(8)
-list1.append(10)
-list1.display()
-print('\ndelete operation:\n')
-list1.deleteNode(11)
-list1.display()
+list1.append(3)
+list1.append(5)
+list1.append(7)
+list1.append(9)
+list2.append(0)
+list2.append(2)
+list2.append(4)
+list2.append(6)
+list2.append(8)
+list2.append(10)
+# list1.display()
+# list2.display()
+# print('\ndelete operation:\n')
+# list1.deleteNode(11)
+# list1.display()
+def merge_sorted_lists(list1: LinkedList, list2: LinkedList)->LinkedList:
+    list3=LinkedList()
+    current1=list1.head
+    current2=list2.head
+    while current1 is not None and current2 is not None:
+        if current1.value>current2.value:
+            list3.append(current2.value)
+            current2=current2.next
+        elif current2.value>current1.value:
+            list3.append(current1.value)
+            current1=current1.next
+        elif current1.value == current2.value:
+            list3.append(current2.value)
+            list3.append(current1.value)
+            current1=current1.next
+            current2=current2.next
+    if current1 is None:
+        while current2 is not None:
+            list3.append(current2.value)
+            current2=current2.next
+    elif current2 is None:
+        while current1 is not None:
+            list3.append(current1.value)
+            current1=current1.next
+    list3.display()
+
+
+merge_sorted_lists(list1, list2)
+
+
