@@ -19,6 +19,12 @@ class Graph:
                 if not self.directed:
                     self.data[n2].append(n1)
 
+    def isCyclic(self, v, visited, parent):
+        # mark the current node as visited
+        visited[v]=True
+        for i in self:
+            pass
+
     def __repr__(self) -> str:
         result = ""
         if self.weighted:
@@ -38,38 +44,42 @@ edges=[(1,0),(0,2),(1,2),(0,3),(3,4)]
 graph1=Graph(node,edges)
 print(graph1)
 
-def bfs(graph, root):
-    queue=[]
-    discovered = [False]*len(graph.data)
-    idx=0
-    discovered[root]=True
-    queue.append(root)
-    while idx<len(queue):
-        current=queue[idx]
-        idx+=1
-    for node in graph.data[current]:
-        if not discovered[node]:
-            discovered[node]=True
-            queue.append(node)
 
-    return queue
 
-def bfs(graph,root):
-    queue=[]
-    discoverd=[False]*len(graph.data)
-    discoverd[root]=True
-    queue.append(root)
+# def bfs(graph, root):
+#     queue=[]
+#     discovered = [False]*len(graph.data)
+#     idx=0
+#     discovered[root]=True
+#     queue.append(root)
+#     while idx<len(queue):
+#         current=queue[idx]
+#         idx+=1
+#     for node in graph.data[current]:
+#         if not discovered[node]:
+#             discovered[node]=True
+#             queue.append(node)
+
+#     return queue
+
+# def bfs(graph,root):
+#     queue=[]
+#     discoverd=[False]*len(graph.data)
+#     discoverd[root]=True
+#     queue.append(root)
     
-    idx=0
-    while idx<len(queue):  #next available index is less than the length of the sequence
-        current = queue[idx]
-        idx+=1
+#     idx=0
+#     while idx<len(queue):  #next available index is less than the length of the sequence
+#         current = queue[idx]
+#         idx+=1
         
-        #checking all edges of current
-        for node in graph.data[current]:
-            if not discoverd[node]:
-                discoverd[node]=True
-                queue.append(node)
-    return queue
+#         #checking all edges of current
+#         for node in graph.data[current]:
+#             if not discoverd[node]:
+#                 discoverd[node]=True
+#                 queue.append(node)
+#     return queue
 
-print(bfs(graph1,0))
+# print(bfs(graph1,0))
+integer=int('100111', base=2)
+print(integer)

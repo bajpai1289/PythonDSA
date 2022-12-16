@@ -8,7 +8,7 @@ def bubbleSortWrecursion(nums):
             nums[i],nums[i+1]=nums[i+1],nums[i]
             bubbleSortWrecursion(nums)
     return nums
-
+# print(bubbleSortWrecursion([3,2,5,4,8,4,1]))
 
 def bubbleSortWOrecursion(nums):
     # nums=list(nums)

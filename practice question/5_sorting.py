@@ -69,19 +69,20 @@ class LinkedList:
 
 list1 = LinkedList()
 list2 = LinkedList()
-list1.append(1)
-list1.append(3)
-list1.append(5)
-list1.append(7)
-list1.append(9)
-list2.append(0)
-list2.append(2)
-list2.append(4)
-list2.append(6)
-list2.append(8)
-list2.append(10)
+# list1.append(1)
+# list1.append(5)
+# list1.append(3)
+# list1.append(9)
+# list1.append(7)
 # list1.display()
-# list2.display()
+list2.append(10)
+list2.append(8)
+list2.append(6)
+list2.append(4)
+list2.append(2)
+list2.append(0)
+# list1.display()
+list2.display()
 # print('\ndelete operation:\n')
 # list1.deleteNode(11)
 # list1.display()
@@ -111,7 +112,28 @@ def merge_sorted_lists(list1: LinkedList, list2: LinkedList)->LinkedList:
             current1=current1.next
     list3.display()
 
+def sort(list2):
+    current=list2.head
+    if current == None:
+        return 
+    while current.next is not None:
+        if current.value>current.next.value:
+            # print(current.value, current.next.value)
+            current.value,current.next.value=current.next.value,current.value
+            sort(list2)
+        current=current.next
+    # list2.display()
+    # print()
+    return
+
+
 
 merge_sorted_lists(list1, list2)
 
+# merge_sorted_lists(list1, list2)
+# sort(list2)
+# print(sort(list2))
+print()
+sort(list2)
+list2.display()
 
