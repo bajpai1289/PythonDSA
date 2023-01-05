@@ -1,24 +1,36 @@
 def isIsomorphic(s: str,t: str):
-    memo={}
+    memo1={}
+    memo2={}
     if len(s)!=len(t):
         return False
+
+    if len(s)==1:
+        return s==t
     n=len(s)
     for i in range(n):
-        if i==n:
-            return True
-
-        if s[i] in memo:
-            if memo[s[i]] !=t[i]:
-                return False
-            else:
-                continue
+        if s[i] in memo1:
+            memo1[s[i]].add(t[i])
         else:
-            memo[s[i]]=t[i] 
-    else:
-        return True
+            memo1[s[i]]=set([t[i]])
+    for i in range(n):
+        if t[i] in memo2:
+            memo2[t[i]].add(s[i])
+        else:
+            memo2[t[i]]=set([s[i]])
+
+    flag1=  all(len(set(i))==1 for i in memo1.values())
+    flag2=  all(len(set(i))==1 for i in memo2.values())
+    return flag1 and flag2
+
 
 
 print(isIsomorphic('badc','baba'))
+print(isIsomorphic(s = "egg", t = "add"))
+print(isIsomorphic(s = "foo", t = "bar"))
+print(isIsomorphic(s = "a", t = "a"))
+print(isIsomorphic(s = "ab", t = "ab"))
+print(isIsomorphic(s = "ab", t = "aa"))
+
 # meme={
 #     "a":1,
 #     "b":2,
