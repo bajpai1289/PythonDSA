@@ -21,6 +21,7 @@ class LinkedList:
             print(current.value, end="=>")
             current=current.next
             
+            
 list1=LinkedList()
 list1.append(1)
 list1.append(1)
