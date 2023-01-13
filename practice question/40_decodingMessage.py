@@ -10,7 +10,7 @@ def decodeMessage(key: str, message: str):
         d[map1[k]]=map2[k]
     
     for i in range(len(message)):
-        
+        pass
 
     
     
