@@ -7,10 +7,12 @@ def decodeMessage(key: str, message: str):
         if i not in map2:
             map2.append(i)
     for k in range(len(map1)):
-        d[map1[k]]=map2[k]
-    
+        d[map2[k]]=map1[k]
+    d[' ']=' '
+    res=''
     for i in range(len(message)):
-        pass
+        res+=d[message[i]]
+    return res
 
     
     
