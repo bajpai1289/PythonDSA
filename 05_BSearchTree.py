@@ -15,4 +15,7 @@ def is_bst(node):
     
     return is_bst_node, min_key, max_key
 
+def test():
+    pass
+
 
