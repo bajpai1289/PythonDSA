@@ -14,27 +14,9 @@ def decodeMessage(key: str, message: str):
         res+=d[message[i]]
     return res
 
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 print(decodeMessage(key = "the quick brown fox jumps over the lazy dog", message = "vkbs bs t suepuv"))
 print(decodeMessage(key = "eljuxhpwnyrdgtqkviszcfmabo", message = "zwx hnfx lqantp mnoeius ycgk vcnjrdb"))
+print(decodeMessage(key = "eljuxhpwnyrdgtqkviszcfmabo", message = "zwxefesf hnfxefwfetrh lqhthtrhantp msthswrtnoeius ycgsthk sthvcnjrdb"))
 
 # print(ord('a'), ord('z'))
