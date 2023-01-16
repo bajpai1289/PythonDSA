@@ -57,7 +57,7 @@ def make_balanced_bst(data, lo=0,hi=None, parent= None):
     root.left=make_balanced_bst(data,lo,mid-1,root)
     root.right=make_balanced_bst(data,mid+1,hi,root)
     return root
-
+    
 def find(node, key):
     if node is None:
         return None
