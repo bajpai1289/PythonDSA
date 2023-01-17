@@ -1,4 +1,1 @@
-import heapq
-arr=[2,17,5,4,3,0]
-heapq.heapify(arr)
-print(arr)
+print([int(i) for i in str(int("".join(map(str,[5,6,8])))+int("".join(map(str,[1,8,6,9]))))])
