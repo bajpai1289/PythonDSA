@@ -1,1 +1,1 @@
-print([int(i) for i in str(int("".join(map(str,[5,6,8])))+int("".join(map(str,[1,8,6,9]))))])
+print([int(i) for i in str(int("".join(map(str,[1,0,2,4])))**int("".join(map(str,[2,3]))))]) 
