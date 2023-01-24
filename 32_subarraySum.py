@@ -16,7 +16,7 @@ TODO:
 arr=[1,2,3,4,5,6,7]
 target=13
 print(subarray_sum_bf(arr,target))
-print('Actual sum', sum(arr[subarray_sum_bf(arr,target)[0]:subarray_sum_bf(arr,target)[1]+1]))
+print('Actual sum', sum(arr[subarray_sum_bf(arr,target)[0] :subarray_sum_bf(arr,target)[1]+1]))
 
 def subarray_sum2(arr, target):
     n=len(arr)
