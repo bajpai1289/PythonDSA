@@ -1,4 +1,4 @@
-def maxProfit(prices: list[int]) -> int:
+def maxProfit(prices: 'list[int]') -> int:
     local_profit=0
     global_profit=0
     for i in range(0, len(prices)):
