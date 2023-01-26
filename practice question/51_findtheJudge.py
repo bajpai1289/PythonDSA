@@ -1,4 +1,4 @@
-def findJudge(n: int, trust: list[list[int]]):
+def findJudge(n: int, trust: 'list[list[int]]'):
     if not trust:
         if n==1:
             return 1

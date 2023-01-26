@@ -1,4 +1,4 @@
-def getConcatenation(nums: list[int]):
+def getConcatenation(nums: 'list[int]'):
     ans= [None]*(2*len(nums))
     n=len(nums)
     for i in range(len(ans)):
