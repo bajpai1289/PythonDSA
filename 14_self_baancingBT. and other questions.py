@@ -1,4 +1,4 @@
-#TODO:
+#TODO: Delete a node from a binary tree
 ''' 
 1. Implement rotations and self balancing insertion
 2. Delete a node from a binary tree
