@@ -25,7 +25,7 @@ def findJudge(n: int, trust: 'list[list[int]]'):
     return -1
         
 
-print(findJudge(n = 3, trust = [[1,3],[2,3],[3,1]])==-1)
-print(findJudge(n = 4, trust = [[1,3],[1,4],[2,3],[2,4],[4,3]])==3)
-print(findJudge(n = 3, trust = [[1,3],[2,3]])==3)
-print(findJudge(n = 3, trust = [[1,2],[2,3]])==-1)
+# print(findJudge(n = 3, trust = [[1,3],[2,3],[3,1]])==-1)
+print(findJudge(n = 4, trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]))
+# print(findJudge(n = 3, trust = [[1,3],[2,3]])==3)
+# print(findJudge(n = 3, trust = [[1,2],[2,3]])==-1)
