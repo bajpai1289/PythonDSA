@@ -1,4 +1,4 @@
-def sortArrayByParity2(A: list[int]) -> list[int]:
+def sortArrayByParity2(A: 'list[int]') -> 'list[int]':
     # s=0
     # e=len(nums)-1
     # while s<e:
