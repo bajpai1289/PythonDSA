@@ -1,5 +1,5 @@
 #TODO: understad this and repeat for minimum permutation
-def Solve(A: list[int], B:int):
+def Solve(A: list[int], B:int): 
     i=0
     _max=len(A)
     d={x:i for i, x in enumerate(A)}

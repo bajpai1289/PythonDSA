@@ -8,3 +8,19 @@
 #     return count
 
 # print(heightChecker([5,1,2,3,4]))
+def fun1(n):
+    x=0
+    while n>0:
+        x+=fun1(n)
+        n-=1
+    return n
+
+def fun2(n):
+    x=0
+    while n>0:
+        x+=fun1(n-1)
+    return n
+
+# fun1(3)
+fun2(3)
+ 
