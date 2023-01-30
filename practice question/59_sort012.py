@@ -17,3 +17,23 @@ from sys import getsizeof
 n=(0,)
 arr=(1,2,3,4,5)
 print(type(n))
+# when you were here before
+# couldnt look you in the eye
+# you're just like an angel 
+# your skin makes me cry 
+# you float like a feather 
+# in a beutiful world
+# you're so fucking special
+# i wish i was special
+# but ima creep 
+# ima wiedro 
+# what the hell im doing here
+# i dont belong here
+# i dont care if it hurts
+# i wanna have control
+# i wanta a perfect body
+# i want a perfect soul
+# i want you to notice
+# when i'm not around
+# so fucking special 
+# i wish i wa
