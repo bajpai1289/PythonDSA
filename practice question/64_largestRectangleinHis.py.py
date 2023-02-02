@@ -15,4 +15,4 @@ def largestRectangleArea(heights: list[int]) -> int:
     return globMax
 
 # print(largestRectangleArea([5,5,1,7,1,1,5,2,7,6]))
-print(largestRectangleArea([0,4]))
+print(largestRectangleArea([0,3,1]))
