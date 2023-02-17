@@ -1,5 +1,6 @@
 # str1='intention'
 # str2='execution'
+#TODO: do the dynamic language solution
 str1='intention'
 str2='exception'
 

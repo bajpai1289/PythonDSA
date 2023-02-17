@@ -18,7 +18,7 @@ def evalRPN(tokens: list[str]) -> int:
                 num=result.pop()
                 result[-1]=int(result[-1]/num)
     return result
-
+isinstance()
 
 print(evalRPN(["4","3","-"]))
 # print(evalRPN(["2","1","+","3","*"]))

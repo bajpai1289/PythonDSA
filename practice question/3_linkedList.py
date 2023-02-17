@@ -116,18 +116,57 @@ class LinkedList:
             curr.next=Node(value)
             curr.next.next=temp
             self.size+=1
+    def removeNthFromEnd(self, n: int):
+        size=0
+        curr=self.head
+        while curr is not None:
+            curr=curr.next
+            size+=1
+
+        rloc= size-n
+        curr=self.head
+        #if removal is at first
+        if n==size:
+            self.head=curr.next
+        #if removal is at last
+        elif n==1:
+            prev=None
+            while curr.next is not None:
+                # print(curr.value)
+                prev=curr
+                curr=curr.next
+            prev.next=None
+        #removal is at the middle
+        else:
+            curr=self.head
+            rloc=size-n
+            pos=0
+            prev=None
+            while pos<rloc:
+                prev=curr
+                curr=curr.next
+                pos+=1
+            prev.next=curr.next
+            
+
+
+
+            # curr.next=curr.next.next
+            # curr.value=None
+            # curr.next=None
+        
+
+    
+
 
 
 ll=LinkedList()
-ll.append(0)
 ll.append(1)
 ll.append(2)
-# ll.append(3)
+ll.append(3)
 ll.append(4)
-ll.insertAt('inserted',0)
+ll.append(5)
+
+
+ll.removeNthFromEnd(2)
 ll.display()
-# print()
-# ll.reverse()
-# ll.display()
-# print(len(ll))
-# print(ll.size)
