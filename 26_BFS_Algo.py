@@ -12,10 +12,10 @@ class Graph:
     def __str__(self) -> str:
         return self.__repr__()
     
-num_nodes=5
-edges=[(0,1),(0,4),(1,2),(1,3),(1,4),(2,3),(3,4)]
+# num_nodes=5
+# edges=[(0,1),(0,4),(1,2),(1,3),(1,4),(2,3),(3,4)]
 
-graph1=Graph(num_nodes,edges)
+# graph1=Graph(num_nodes,edges)
 # print(graph1)
 
 def bfs(graph,root):
@@ -79,20 +79,20 @@ Hint: using bfs, pick up a first node, perform bfs on it that gives you the conn
       look at 9:37:00                
 
 '''
-num_nodes3=9
-edges3=[(0,1),(0,3),(1,2),(2,3),(4,5),(4,6),(5,6),(7,8)]
+num_nodes3=5
+edges3=[(0,1),(0,2),(2,3),(2,4)]
 graph2=Graph(num_nodes3,edges3)
-# print(graph2)
-# print(bfs(graph2,0))
+print(graph2)
+print(bfs(graph2,0))
 
-node=5
-edges=[(1,0),(0,2),(1,2),(0,3),(3,4)]
-graph3=Graph(node,edges)
-print(graph3)
+# node=5
+# edges=[(1,0),(0,2),(1,2),(0,3),(3,4)]
+# graph3=Graph(node,edges)
+# print(graph3)
 # print(bfs_with_distance_and_parent(graph3,0))
 
-num_nodes4=10
-edges4=[(0,1),(0,2),(0,3),(1,4),(2,5),(2,6),(3,9),(4,8),(6,7),(6,9),(8,9)]
-graph5=Graph(num_nodes4,edges4)
+# num_nodes4=10
+# edges4=[(0,1),(0,2),(0,3),(1,4),(2,5),(2,6),(3,9),(4,8),(6,7),(6,9),(8,9)]
+# graph5=Graph(num_nodes4,edges4)
 # print(graph5)
 # print(bfs_with_distance_and_parent(graph5,0))
