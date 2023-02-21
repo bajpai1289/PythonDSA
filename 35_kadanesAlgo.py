@@ -6,7 +6,7 @@ def kadane(arr: list[int]):
             max_global=max_current
     return max_global
 
-print(kadane([-2,3,2,-1]))
+print(kadane([4,-1,2,-7,3,4]))
 
 # arr = [0,1,1,0,0,0,1,1,0,1,0]
 # i = 0

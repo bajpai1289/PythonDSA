@@ -19,7 +19,7 @@ class Twitter:
     def follow(self, followerId: int, followeeId: int) -> None:
         if followerId in self.user:
             self.user[followerId].append(followeeId)
-        else"
+        else:
             self.user[followerId]=[followeeId]
         
 
