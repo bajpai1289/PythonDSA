@@ -19,4 +19,4 @@ def firstMissingPositive(nums: list[int]):
 # print(firstMissingPositive([3,4,-1,1]))
 # print(firstMissingPositive([7,8,9,11,12]))
 # print(firstMissingPositive([4,2,-1,1]))
-print(firstMissingPositive([2,1]))
+print(firstMissingPositive(nums= [2,1]))
