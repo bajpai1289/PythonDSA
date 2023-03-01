@@ -1,6 +1,3 @@
-from locale import currency
-
-
 class heap:
     def __init__(self) -> None:
         self.heap=[0]
