@@ -8,7 +8,7 @@ test_case = {
     'input': [1,3,7,1],
     'output': 7
 }
-def candy(ratings: list[int]) -> int:
+def candy(ratings: 'list[int]') -> int:
     n = len(ratings)
     data = sorted((x,i) for i, x in enumerate(ratings)) #for this particular kid rating this is its index, then sort all the kids by the ratings 
     candies = [1]*n    
