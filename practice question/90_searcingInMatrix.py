@@ -5,7 +5,7 @@ def searchMatrix(matrix: 'list[list[int]]', target: int) -> bool:
         while lo<=hi:
             mid=(lo+hi)//2
             if arr[mid]==target:
-                return mid
+                return True
             elif arr[mid]<target:
                 lo=mid+1
             elif arr[mid]>target:
@@ -16,7 +16,7 @@ def searchMatrix(matrix: 'list[list[int]]', target: int) -> bool:
     while lo<=hi:
         mid=(lo+hi)//2
         if matrix[mid][0]<=target and matrix[mid][-1]>=target:
-            return search(matrix[mid], target=target), mid
+            return search(matrix[mid], target=target)
         elif matrix[mid][0]>target:
             hi=mid-1
         elif matrix[mid][-1]<target:
