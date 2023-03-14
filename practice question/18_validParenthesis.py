@@ -6,6 +6,7 @@ def validParenthesis(s):
         "}":"{"
     }
     for i in s:
+        print(stack)
         if i in lookup.values():
             stack.append(i)
         elif stack and stack[-1]==lookup[i]:
@@ -14,4 +15,4 @@ def validParenthesis(s):
             return False
     return stack==[]
 
-print(validParenthesis('([)]'))
+print(validParenthesis('{[()()[]]}'))
