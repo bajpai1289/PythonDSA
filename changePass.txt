@@ -2,3 +2,4 @@ hello
 change in the bugfix branch
 changes in the master branch
 
+testing main branch git merge tool
