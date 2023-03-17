@@ -40,13 +40,12 @@ class LinkedList:
         #removal at the last:
     
     def swap(self):
-        curr= self.head
-        next = curr.next
-        while curr and next:
-            curr.val , next.val = next.val, curr.val
-            next=next.next
-            curr=curr.next
-        
+        prev =self.head
+        curr = self.head.next
+        while curr.next and curr.next.next:
+            curr.val, prev.val = prev.val,curr.val
+            prev=prev.next.next
+            curr=curr.next.next
 
         
 
@@ -58,6 +57,9 @@ list1.append(2)
 list1.append(3)
 list1.append(4)
 list1.append(5)
+list1.append(6)
+list1.append(7)
+# list1.append(8)
 list1.show()
 print()
 list1.swap()
