@@ -12,7 +12,7 @@ class Trie:
         for c in word:
             if c not in curr.children:
                 curr.children[c]=TrieNode()
-                curr=curr.children[c]
+                curr=curr.children[c] #incorrect identation was the cause of this error
         curr.word=True
     
     def search(self, word):
