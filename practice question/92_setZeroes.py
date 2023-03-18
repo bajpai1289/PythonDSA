@@ -1,5 +1,5 @@
 matrix=[[0,1,2,0],[3,4,5,2],[1,3,1,5]]
-def setZeroes(matrix: list[list[int]]) -> None:
+def setZeroes(matrix: 'list[list[int]]') -> None:
     indexes=set()
     for r in range(len(matrix)):
         for c in range(len(matrix[r])):          
