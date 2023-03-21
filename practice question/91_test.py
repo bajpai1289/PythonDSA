@@ -35,14 +35,10 @@
 
 
 
+def create(n:int, arr:list=[]):
+    if n<0:
+        return arr
+    arr.append(n)
+    return create(n-1, arr)
 
-
-arr=[1,2,3,4]
-def swap(list1: list[int]):
-    for i in range(0, len(list1)-1, 2):
-        list1[i],list1[i+1]=list1[i+1],list1[i]
-    return list1
-
-
-# swap(arr)
-print(swap(arr))
+print(create(5))
