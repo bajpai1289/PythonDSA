@@ -35,10 +35,18 @@
 
 
 
-def create(n:int, arr:list=[]):
-    if n<0:
-        return arr
-    arr.append(n)
-    return create(n-1, arr)
+# def create(n:int, arr:list=[]):
+#     if n<0:
+#         return arr
+#     arr.append(n)
+#     return create(n-1, arr)
 
-print(create(5))
+# print(create(5))
+var = [1,2,3,4]
+def fn():
+    temp=var[0]
+    var[0]=var[-1]
+    var[-1]=temp
+fn()
+print(var)
+# print(temp)
