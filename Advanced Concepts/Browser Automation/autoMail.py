@@ -1,6 +1,6 @@
 from selenium import webdriver
 from time import sleep
-
+from passwords import GmailID, GmailPassword
 from selenium.webdriver.common.by import By
 # import org.openqa.selenium.support.ui.Select
 from selenium.webdriver.support.ui import Select
@@ -10,13 +10,13 @@ signIn = browser.find_element(By.LINK_TEXT,"Sign in")
 signIn.click()
 sleep(0.5)
 email = browser.find_element(By.ID, "identifierId")
-email.send_keys("abhishek.bajpai@velocitai.com")
+email.send_keys(GmailID)
 sleep(1)
 s1 = browser.find_element(By.CSS_SELECTOR, ".VfPpkd-LgbsSe-OWXEXe-k8QpJ > span:nth-child(4)")
 s1.click()
 sleep(2)
 passw = browser.find_element(By.CSS_SELECTOR, "#password > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)")
-passw.send_keys("Home@1289")
+passw.send_keys(GmailPassword)
 sleep(1)
 s1 = browser.find_element(By.CSS_SELECTOR, ".VfPpkd-LgbsSe-OWXEXe-k8QpJ > span:nth-child(4)")
 s1.click()
