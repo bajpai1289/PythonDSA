@@ -1,5 +1,7 @@
 from selenium import webdriver
 from time import sleep
+from subprocess import run
+run(["pip","install","selenium"])
 from selenium.webdriver.common.by import By
 # import org.openqa.selenium.support.ui.Select
 from selenium.webdriver.support.ui import Select
