@@ -42,11 +42,23 @@
 #     return create(n-1, arr)
 
 # print(create(5))
-var = [1,2,3,4]
-def fn():
-    temp=var[0]
-    var[0]=var[-1]
-    var[-1]=temp
-fn()
-print(var)
-# print(temp)
+# var = [1,2,3,4]
+
+# def fn():
+#     temp=var[0]
+#     var[0]=var[-1]
+#     var[-1]=temp
+# fn()
+# print(var)
+# # print(temp)
+
+
+# arr=[[3,2,1],[6,5,4],[9,8,7]]
+# tmp=arr.copy()
+# tmp[0].sort()
+# print(arr)
+
+def pr(x,y,z):
+    print(f"x={x}, y={y}, z={z}")
+
+pr(x=3,z=2,y=1)
