@@ -58,7 +58,64 @@
 # tmp[0].sort()
 # print(arr)
 
-def pr(x,y,z):
-    print(f"x={x}, y={y}, z={z}")
+# def pr(x,y,z):
+#     print(f"x={x}, y={y}, z={z}")
 
-pr(x=3,z=2,y=1)
+# pr(x=3,z=2,y=1)
+
+# def reverse(num: int):
+#     count = 0
+#     # print(i)
+#     while num>0:
+#         print(count)
+#         digit = num%10
+#         count = count*10+digit
+#         num//=10
+#     return count
+
+# print(reverse(12345))
+
+
+
+# class test:
+#     name="shiana"
+#     def __init__(self, prof= "developer") -> None:
+#         self.profile = prof
+#         self.staticProfile = self.name
+
+#     def changeProfile(self, strs='Abhishek'):
+#         self.name=strs
+
+# obj = test()
+# print(obj.profile)  # print developer
+# print(obj.staticProfile) #print shiana
+# obj.changeProfile()
+# print(obj.name) #print Abhisek
+# print(obj.staticProfile) #print shiana??
+# print(test.name) #print Shiana??
+# test.name= "Kirti"
+# print(obj.staticProfile)
+# obj1 = test("tanya")
+# print(obj1.profile)
+
+
+def fib(x):
+    if x==1:
+        return 1
+    if x==0:
+        return 0
+    if x==2:
+        return 2
+    return fib(x-1)+fib(x-2)
+
+n=5
+for i in range(9):
+    print(fib(i))
+
+def dp(n):
+    arr=[0,1]
+    for i in range(n-1):
+        arr.append(arr[-1]+arr[-2])
+    return arr
+
+print(dp(9))
