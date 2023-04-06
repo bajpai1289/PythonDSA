@@ -1,3 +1,4 @@
+
 def kadane(arr: list[int]):
     max_current = max_global = arr[0]
     for i in range(1, len(arr)):
