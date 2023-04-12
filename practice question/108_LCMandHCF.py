@@ -29,7 +29,6 @@ def lcmAndGcd(n: int , m: int):
     res.append(HCF)
 
     return res
-import scipy
 
 
 print(lcmAndGcd(5,10))
