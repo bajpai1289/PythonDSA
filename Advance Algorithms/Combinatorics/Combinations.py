@@ -12,7 +12,7 @@ def helper(i, curComb, combs, n , k):
         return
     for j in range(i, n+1):
         curComb.append(j)
-        helper(j+1, curComb, combs, n,k)
+        helper(j+1, curComb, combs, n,k) 
         curComb.pop()
 
 print(combinations(4,2))
