@@ -7,5 +7,7 @@
 #     pass
 
 tpl = (1,2,[4,3,2],'strs')
-tpl[2].append(3)
+def test(t: tuple):
+    t[-1]+='this'
+test(tpl)
 print(tpl)
