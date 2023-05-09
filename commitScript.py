@@ -3,7 +3,7 @@ import sys
 import os
 
 
-msg = "Did questions" 
+msg = "Did ThreeSome" 
 repo_directory = os.getcwd()
 
 subprocess.run(["git", "add", "."], cwd=repo_directory)
