@@ -5,7 +5,7 @@ def removeKdigits(num: str, k: int) -> str:
         while stack and k>0 and stack[-1] > n:
             stack.pop()
             k -= 1
-        if stack or n is not '0': 
+        if stack or n != '0': 
             stack.append(n)       
     if k:
         stack=stack[0:-k]     
