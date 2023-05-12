@@ -108,9 +108,9 @@ def fib(x):
         return 2
     return fib(x-1)+fib(x-2)
 
-n=5
-for i in range(9):
-    print(fib(i))
+# n=5
+# for i in range(9):
+#     print(fib(i))
 
 def dp(n):
     arr=[0,1]
@@ -118,4 +118,9 @@ def dp(n):
         arr.append(arr[-1]+arr[-2])
     return arr
 
-print(dp(9))
+# print(dp(9))
+a=10
+def test():
+    a=1
+    print(a)
+test()
